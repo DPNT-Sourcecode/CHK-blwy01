@@ -31,10 +31,3 @@ price_table = {
 }
 
 special_offers = {"A": (3, 130), "B": (2, 45)}
-
-
-
-
-
-
-
