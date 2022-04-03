@@ -39,4 +39,3 @@ def test_chk_get_same_free_and_more():
 
 def test_chk_get_same_free_not_enough():
     assert checkout_solution.checkout("FF") == 20
-
