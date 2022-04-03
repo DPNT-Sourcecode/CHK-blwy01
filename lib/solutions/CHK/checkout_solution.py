@@ -9,6 +9,7 @@ def checkout(skus):
         return -1
     total = 0
     basket = Counter(skus)
+    
     for sku, number in basket.items():
         try:
             price = price_table[sku]
@@ -79,3 +80,5 @@ get_free_offers = {
     "Q": ("R", 3),
     "U": ("U", 3),
 }
+
+mixed_offers = ({"S", "T", "X", "Y", "Z"}, 3, 45)
