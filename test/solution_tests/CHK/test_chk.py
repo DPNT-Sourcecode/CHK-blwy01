@@ -19,3 +19,12 @@ def test_chk_multiple():
 
 def test_chk_offer():
     assert checkout_solution.checkout("AAABBC") == 195
+
+
+def test_chk_multiple_offer():
+    assert checkout_solution.checkout("AAAAABBC") == 195
+
+
+def test_chk_get_free():
+    assert checkout_solution.checkout("AAABBC") == 195
+
