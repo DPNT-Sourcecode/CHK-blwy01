@@ -39,3 +39,8 @@ def test_chk_get_same_free_and_more():
 
 def test_chk_get_same_free_not_enough():
     assert checkout_solution.checkout("FF") == 20
+
+
+def test_chk_mixed_offer():
+    assert checkout_solution.checkout("STX") == 45
+
