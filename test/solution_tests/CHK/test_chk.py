@@ -43,3 +43,8 @@ def test_chk_get_same_free_not_enough():
 
 def test_chk_mixed_offer():
     assert checkout_solution.checkout("STX") == 45
+
+
+def test_chk_mixed_offer_cheaper():
+    assert checkout_solution.checkout("STXYZ") == 120
+
