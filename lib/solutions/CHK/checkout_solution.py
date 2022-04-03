@@ -14,7 +14,7 @@ def checkout(skus):
         except KeyError:
             return -1
         if sku in special_offers:
-            
+            for so_multiplayer in special_offers[sku].sorted():
             so_multiplayer = next(iter(special_offers[sku].keys()))
             so_price = next(iter(special_offers[sku].values()))
             so_items = number // so_multiplayer
@@ -32,6 +32,7 @@ price_table = {
 }
 
 special_offers = {"A": {3: 130}, "B": {2: 45}}
+
 
 
 
