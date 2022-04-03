@@ -9,10 +9,16 @@ def checkout(skus):
         return -1
     total = 0
     basket = Counter(skus)
-    mixed_purchase = mixed_offers[0] & set(basket.keys())
-    if len(mixed_purchase) >= mixed_offers[1]:
-        total += mixed_offers[2]
-        for s in mixed_purchase[mixed_offers[1]:]
+    while True:
+        mixed_purchase = list(mixed_offers[0] & set(basket.keys()))
+        if len(mixed_purchase) >= mixed_offers[1]:
+            total += mixed_offers[2]
+            for s in mixed_purchase[:mixed_offers[1]]:
+                basket[s] -= 1
+                if basket[s] == 0:
+                    basket.pop(s)
+        else:
+            break
     for sku, number in basket.items():
         try:
             price = price_table[sku]
