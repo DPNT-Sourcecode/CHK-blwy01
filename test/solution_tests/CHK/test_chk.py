@@ -35,7 +35,3 @@ def test_chk_get_same_free():
 
 def test_chk_get_same_free_and_more():
     assert checkout_solution.checkout("FFFF") == 30
-
-
-
-

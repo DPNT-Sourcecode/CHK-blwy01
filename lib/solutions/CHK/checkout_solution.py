@@ -17,7 +17,10 @@ def checkout(skus):
         if sku in get_free_offers:
             qualify_sku = get_free_offers[sku][0]
             get_free_multiplayer = get_free_offers[sku][1]
-            number -= basket[qualify_sku] // get_free_multiplayer
+            if sku == qualify_sku:
+                number -= basket[qualify_sku] // (get_free_multiplayer + 1)
+            else:
+                number -= basket[qualify_sku] // get_free_multiplayer
         if sku in multibuy_offers:
             for so_multiplayer in sorted(
                 list(multibuy_offers[sku].keys()), reverse=True
@@ -35,7 +38,3 @@ price_table = {"A": 50, "B": 30, "C": 20, "D": 15, "E": 40, "F": 10}
 multibuy_offers = {"A": {3: 130, 5: 200}, "B": {2: 45}}
 
 get_free_offers = {"B": ("E", 2), "F": ("F", 2)}
-
-
-
-
