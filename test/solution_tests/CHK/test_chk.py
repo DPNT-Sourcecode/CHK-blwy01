@@ -6,7 +6,7 @@ def test_chk_not_str():
 
 
 def test_chk_not_exist():
-    assert checkout_solution.checkout("y") == -1
+    assert checkout_solution.checkout("ABCy") == -1
 
 
 def test_chk():
@@ -14,11 +14,12 @@ def test_chk():
 
 
 def test_chk_multiple():
-    assert checkout_solution.checkout("A A B C C") == 170
+    assert checkout_solution.checkout("AABCC") == 170
 
 
 def test_chk_offer():
-    assert checkout_solution.checkout("A A A B B C") == 195
+    assert checkout_solution.checkout("AAABBC") == 195
+
 
 
 
