@@ -30,5 +30,6 @@ def test_chk_get_free():
 
 
 def test_chk_get_same_free():
-    assert checkout_solution.checkout("FFFBC") == 140
+    assert checkout_solution.checkout("FFFBC") == 70
+
 

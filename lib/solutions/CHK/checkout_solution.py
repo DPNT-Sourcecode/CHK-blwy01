@@ -30,9 +30,10 @@ def checkout(skus):
     return total
 
 
-price_table = {"A": 50, "B": 30, "C": 20, "D": 15, "E": 40}
+price_table = {"A": 50, "B": 30, "C": 20, "D": 15, "E": 40, "F": 10}
 
 multibuy_offers = {"A": {3: 130, 5: 200}, "B": {2: 45}}
 
 get_free_offers = {"B": ("E", 2), "F": ("F", 2)}
+
 
