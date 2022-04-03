@@ -10,7 +10,7 @@ def test_chk_not_exist():
 
 
 def test_chk():
-    assert checkout_solution.checkout("A B C") == 100
+    assert checkout_solution.checkout("ABC") == 100
 
 
 def test_chk_multiple():
@@ -19,5 +19,6 @@ def test_chk_multiple():
 
 def test_chk_offer():
     assert checkout_solution.checkout("A A A B B C") == 195
+
 
 

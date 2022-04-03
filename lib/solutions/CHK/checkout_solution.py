@@ -8,12 +8,12 @@ def checkout(skus):
         return -1
     total = 0
     basket = Counter(skus)
-    for sku in basket:
+    for sku, number in basket.items():
         try:
             price = price_table[sku]
         except KeyError:
             return -1
-        total += price
+        total += (price * number)
     return total
 
 
@@ -25,6 +25,7 @@ price_table = {
 }
 
 special_offers = {"A": (3, 130), "B": (2, 45)}
+
 
 
 
