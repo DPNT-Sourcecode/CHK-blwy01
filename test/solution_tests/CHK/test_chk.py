@@ -1,7 +1,11 @@
 from solutions.CHK import checkout_solution
 
 
-def test_chk_illegal():
+def test_chk_not_str():
+    assert checkout_solution.checkout(5) == -1
+
+
+def test_chk_not_exist():
     assert checkout_solution.checkout(5) == -1
 
 
@@ -14,4 +18,5 @@ def test_chk_multiple():
 
 
 def test_chk_offer():
-    assert checkout_solution.checkout("A A A B B C") == 100
+    assert checkout_solution.checkout("A A A B B C") == 195
+
