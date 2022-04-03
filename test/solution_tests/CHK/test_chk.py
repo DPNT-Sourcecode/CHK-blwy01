@@ -22,11 +22,8 @@ def test_chk_offer():
 
 
 def test_chk_multiple_offer():
-    assert checkout_solution.checkout("AAAAABC") == 250
+    assert checkout_solution.checkout("AAAAAABC") == 300
 
 
 def test_chk_get_free():
     assert checkout_solution.checkout("EEEBC") == 140
-
-
-
