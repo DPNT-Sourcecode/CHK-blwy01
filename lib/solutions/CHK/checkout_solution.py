@@ -1,8 +1,11 @@
 # noinspection PyUnusedLocal
 # skus = unicode string
 def checkout(skus):
+    if not isinstance(skus, str):
+        return -1
     
-    raise NotImplementedError()
+    for sku in skus.split():
+        price_table
 
 
 price_table = {
@@ -13,4 +16,5 @@ price_table = {
 }
 
 special_offers = {"A": (3, 130), "B": (2, 45)}
+
 
