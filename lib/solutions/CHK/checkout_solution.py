@@ -14,7 +14,11 @@ def checkout(skus):
         except KeyError:
             return -1
         if sku in special_offers:
-            total 
+            so_multiplayer = special_offers[sku][0]
+            so_price = special_offers[sku][1]
+            so_items = number // so_multiplayer
+            total += (so_items * so_price)
+            number = number % so_multiplayer
         total += (price * number)
     return total
 
@@ -27,6 +31,7 @@ price_table = {
 }
 
 special_offers = {"A": (3, 130), "B": (2, 45)}
+
 
 
 
