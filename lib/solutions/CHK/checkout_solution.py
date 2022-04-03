@@ -7,12 +7,13 @@ def checkout(skus):
     if not isinstance(skus, str):
         return -1
     total = 0
-    try:
-        basket = skus.split()
-    except KeyError:
-        return -1
+    basket = skus.split()
     for sku in basket:
-        total += price_table[sku]
+        try:
+            price = price_table[sku]
+        except KeyError:
+            return -1
+        total += price
     return total
 
 
@@ -24,5 +25,6 @@ price_table = {
 }
 
 special_offers = {"A": (3, 130), "B": (2, 45)}
+
 
 
