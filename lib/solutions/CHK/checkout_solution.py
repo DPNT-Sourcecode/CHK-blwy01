@@ -32,11 +32,13 @@ price_table = {
     "B": 30,
     "C": 20,
     "D": 15,
+    "E": 40
 }
 
 multibuy_offers = {"A": {3: 130, 5: 200}, "B": {2: 45}}
 
 get_free_offers = {"B": ("E", 2)}
+
 
 
 
