@@ -26,6 +26,7 @@ def test_chk_multiple_offer():
 
 
 def test_chk_get_free():
-    assert checkout_solution.checkout("EEEBC") == 195
+    assert checkout_solution.checkout("EEEBC") == 140
+
 
 

@@ -30,4 +30,5 @@ price_table = {
     "D": 15,
 }
 
-special_offers = {"A": (3, 130), "B": (2, 45)}
+special_offers = {"A": {3: 130}, "B": {2: 45}}
+
