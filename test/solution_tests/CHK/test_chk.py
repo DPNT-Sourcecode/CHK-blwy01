@@ -8,3 +8,8 @@ def test_chk_illegal():
 def test_chk():
     assert checkout_solution.checkout("A B C") == 100
 
+
+def test_chk_offer():
+    assert checkout_solution.checkout("A B C") == 100
+
+

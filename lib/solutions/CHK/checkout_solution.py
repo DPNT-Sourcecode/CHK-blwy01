@@ -3,9 +3,10 @@
 def checkout(skus):
     if not isinstance(skus, str):
         return -1
-    
+    total = 0
     for sku in skus.split():
-        price_table
+        total += price_table[sku]
+    return total
 
 
 price_table = {
@@ -16,5 +17,6 @@ price_table = {
 }
 
 special_offers = {"A": (3, 130), "B": (2, 45)}
+
 
 
