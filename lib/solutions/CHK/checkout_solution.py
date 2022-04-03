@@ -13,7 +13,11 @@ def checkout(skus):
         mixed_purchase = list(mixed_offers[0] & set(basket.keys()))
         if len(mixed_purchase) >= mixed_offers[1]:
             total += mixed_offers[2]
-            for s in mixed_purchase[:mixed_offers[1]]:
+            for s in sorted(
+                mixed_purchase[: mixed_offers[1]],
+                key=lambda x: price_table[x],
+                reverse=True,
+            ):
                 basket[s] -= 1
                 if basket[s] == 0:
                     basket.pop(s)
@@ -91,3 +95,4 @@ get_free_offers = {
 }
 
 mixed_offers = ({"S", "T", "X", "Y", "Z"}, 3, 45)
+
