@@ -14,7 +14,9 @@ def checkout(skus):
         except KeyError:
             return -1
         if sku in get_free_offers:
-            get_free_offers[sku]
+            get_free_sku = get_free_offers[sku][0]
+            get_free_multiplayer = get_free_offers[sku][1]
+            number -= Counter[get_free_sku]
         if sku in multibuy_offers:
             for so_multiplayer in sorted(list(multibuy_offers[sku].keys()), reverse=True):
                 so_price = multibuy_offers[sku][so_multiplayer]
@@ -34,7 +36,8 @@ price_table = {
 
 multibuy_offers = {"A": {3: 130, 5: 200}, "B": {2: 45}}
 
-get_free_offers = {"B": {"E": 2}}
+get_free_offers = {"B": ("E", 2)}
+
 
 
 
