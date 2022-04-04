@@ -103,7 +103,3 @@ get_free_offers = {
 }
 
 mixed_offers = ({"S", "T", "X", "Y", "Z"}, 3, 45)
-
-
-
-
