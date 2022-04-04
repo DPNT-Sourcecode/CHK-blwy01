@@ -46,4 +46,5 @@ def test_chk_mixed_offer():
 
 
 def test_chk_mixed_offer_cheaper():
-    assert checkout_solution.checkout("STXZZ") == 95
+    assert checkout_solution.checkout("STXZZ") == 82
+
