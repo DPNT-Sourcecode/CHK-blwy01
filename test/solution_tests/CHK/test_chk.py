@@ -62,5 +62,6 @@ def test_chk_mixed_offer_same():
 
 
 def test_chk_mixed_offer_1_plus_1():
-    assert checkout_solution.checkout("SSSZ") == 45
+    assert checkout_solution.checkout("SSSZ") == 65
+
 
