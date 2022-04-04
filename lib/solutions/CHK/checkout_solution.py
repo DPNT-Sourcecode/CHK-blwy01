@@ -76,7 +76,7 @@ price_table = {
     "W": 20,
     "X": 17,
     "Y": 20,
-    "Z": 17,
+    "Z": 21,
 }
 
 multibuy_offers = {
@@ -98,6 +98,7 @@ get_free_offers = {
 }
 
 mixed_offers = ({"S", "T", "X", "Y", "Z"}, 3, 45)
+
 
 
 
