@@ -49,5 +49,18 @@ def test_chk_mixed_offer_cheaper():
     assert checkout_solution.checkout("STXZZ") == 82
 
 
-def test_chk_mixed_offer_why():
+def test_chk_mixed_offer_repeated():
     assert checkout_solution.checkout("STXSTX") == 90
+
+
+def test_chk_mixed_offer_repeated():
+    assert checkout_solution.checkout("STXSTX") == 90
+
+
+def test_chk_mixed_offer_same():
+    assert checkout_solution.checkout("SSS") == 45
+
+
+def test_chk_mixed_offer_1_plus_1():
+    assert checkout_solution.checkout("SSSZ") == 45
+

@@ -35,23 +35,25 @@ def checkout(skus):
 
 
 def _apply_mixed_purchases(basket, total):
-    while True:
-        mixed_purchase = {k: v for k, v in basket.items() if k in mixed_offers[0]}
-        if sum(mixed_purchase.values()) >= mixed_offers[1]:
-            remove = mixed_offers[1]
-            total += mixed_offers[2]
-            for s in sorted(
-                    mixed_purchase.keys(),
-                    key=lambda x: price_table[x],
-                    reverse=True,
-            ):
-                while remove > 0 and basket[s] > 0:
-                    remove -= 1
-                    basket[s] -= 1
-                    if basket[s] == 0:
-                        basket.pop(s)
-        else:
-            break
+    mixed_purchase = {k: v for k, v in basket.items() if k in mixed_offers[0]}
+    if not mixed_purchase:
+        return total
+    while sum(mixed_purchase.values()) >= mixed_offers[1]:
+        remove = mixed_offers[1]
+        total += mixed_offers[2]
+        for s in sorted(
+                mixed_purchase.keys(),
+                key=lambda x: price_table[x],
+                reverse=True,
+        ):
+            while remove > 0 and basket[s] > 0:
+                remove -= 1
+                basket[s] -= 1
+                if basket[s] == 0:
+                    basket.pop(s)
+                mixed_purchase[s] -= 1
+                if mixed_purchase[s] == 0:
+                    mixed_purchase.pop(s)
     return total
 
 
@@ -103,5 +105,6 @@ get_free_offers = {
 }
 
 mixed_offers = ({"S", "T", "X", "Y", "Z"}, 3, 45)
+
 
 
